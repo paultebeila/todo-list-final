@@ -1,8 +1,8 @@
 import React from 'react'
 
-import '../css/displayTransactions.css'
+import '../css/display.css'
 
-function DisplayTransaction(props){
+function Display(props){
     const deleteHandler = () => {
         props.setTransection(props.list.filter((el) => el.id !== props.item.id));
     }
@@ -13,21 +13,21 @@ function DisplayTransaction(props){
                <div>
 
                    {plan.priority === "Low" ? (
-                    <div className="transaction-item" style={{borderBottom: '2px solid green', display: 'flex', justifyContent: 'space-between'}}>
+                    <div className="transaction-item" style={{borderBottom: '5px solid green', display: 'flex', justifyContent: 'space-between', marginTop: '5px'}}>
                        <div>
                            <h4 style={{paddingLeft: "12px", paddingTop: "20px"}}>{plan.plan}</h4>
                        </div>
                        <button onClick={deleteHandler} className=" delete">COMPLETE</button>
                    </div> 
                    ): plan.priority === "High" ? (
-                    <div className="transaction-item" style={{borderBottom: '2px solid red', display: 'flex', justifyContent: 'space-between'}}>
+                    <div className="transaction-item" style={{borderBottom: '5px solid red', display: 'flex', justifyContent: 'space-between', marginTop: '5px'}}>
                        <div>
                            <h4 style={{paddingLeft: "12px", paddingTop: "20px"}}>{plan.plan}</h4>
                        </div>
                        <button onClick={deleteHandler} className=" delete">COMPLETE</button>
                    </div> 
                    ):(
-                   <div className="transaction-item" style={{borderBottom: '2px solid yellow', display: 'flex', justifyContent: 'space-between'}}>
+                   <div className="transaction-item" style={{borderBottom: '5px solid yellow', display: 'flex', justifyContent: 'space-between', marginTop: '5px'}}>
                    <div>
                        <h4 style={{paddingLeft: "12px", paddingTop: "20px"}}>{plan.plan}</h4>
                    </div>
@@ -41,4 +41,4 @@ function DisplayTransaction(props){
         </div>
     );
 }
-export {DisplayTransaction};
+export {Display};

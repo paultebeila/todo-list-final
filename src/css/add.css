@@ -2,13 +2,13 @@ input {
     width: 500px;
     height: 30px;
     background-color: white;
-    border: none;
+    border: 0.1%;
     padding-left: 15px;
     margin-top: 15px;
 }
 
 select{
-    width: 515px;
+    width: 100px;
     height: 30px;
     background-color: white;
     border: none;

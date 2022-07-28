@@ -3,7 +3,7 @@ import './App.css';
 import React, { useState } from 'react';
 import Home from './components/home';
 import Login from './components/login';
-import SignUp from './components/signuo';
+import SignUp from './components/signup';
 import ForgotPass from './components/forgotPassword';
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
@@ -20,6 +20,8 @@ function App() {
     
   })
   return (
+
+    
 
     <Router>
       <Switch>

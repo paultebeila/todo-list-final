@@ -1,14 +1,27 @@
-import AddItem from "./addItem";
-import {DisplayTransaction} from "./displayTransaction"
-//import{BudgetBalance} from './balance'
+import AddPlan from "./addPlan";
+import {Display} from "./display"
+import '../css/home.css'
+import { Link } from "react-router-dom";
 
 function Home(props){
 
+    const Logout = () => {
+        
+    }
 
     return (
+        
         <div className="container">
-            <AddItem add={props.add}/>
-            <DisplayTransaction list={props.list}/>
+            <form className='panel'>
+                    <h2>Paul</h2>
+                    <Link to="/"><button className='btn'>Log out</button></Link>
+                    
+                </form>
+            <div className="App">
+                
+            </div>
+            <AddPlan add={props.add}/>
+            <Display list={props.list}/>
         </div>
     ) 
 }
