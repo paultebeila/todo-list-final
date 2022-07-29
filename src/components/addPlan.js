@@ -5,6 +5,7 @@ import {db} from '../config/firebase';
 import {addDoc, collection} from 'firebase/firestore'
 function AddPlan(props){
 
+    const [id, setId] = useState('')
     const [plan, setPlan] = useState('')
     const [priority, setPriority] = useState('')
 
@@ -22,8 +23,7 @@ function AddPlan(props){
             console.log(err);
         })
 
-        props.add
-        (plan, priority);
+        props.add(plan, priority);
     })
 
    
@@ -34,7 +34,7 @@ function AddPlan(props){
                 <h1 style={{paddingLeft: "5px"}}>Add Plan</h1><br></br>
             </div>
             <div className="body">
-                <input placeholder="Enter Item" onChange={(e)=>setPlan(e.target.value)} />
+                <input placeholder="Enter Plan" onChange={(e)=>setPlan(e.target.value)} />
                 <select onChange={(e)=>setPriority(e.target.value)}>
                     <option hidden>Priority</option>
                     <option value="High">High</option>

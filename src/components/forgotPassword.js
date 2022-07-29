@@ -13,7 +13,7 @@ function ForgotPass(){
     const forgotPass = (()=>{
 
         sendPasswordResetEmail(auth, email).then(()=>{
-            history.push("/login");
+            history.push("/");
         }).catch(()=>{
             console.log('Enter the correct email');
         })

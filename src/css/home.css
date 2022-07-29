@@ -2,7 +2,7 @@
 .panel{
     background-color: rgb(252, 239, 239);
     display: flex;
-    width: 50%;
+    width: 55%;
     height: 70px;
   }
   .btn{

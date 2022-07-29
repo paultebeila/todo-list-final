@@ -3,12 +3,16 @@ import React from 'react'
 import '../css/display.css'
 
 function Display(props){
-    const deleteHandler = () => {
+    /*const deleteHandler = (id) => {
         props.setTransection(props.list.filter((el) => el.id !== props.item.id));
-    }
+    }*/
+
+    function deleteHandler(row){
+        document.getElementById('row').deleteRow(row);
+     }
 
     return(
-        <div>
+        <div id='row'>
            {props.list.map((plan) => (
                <div>
 
@@ -31,7 +35,7 @@ function Display(props){
                    <div>
                        <h4 style={{paddingLeft: "12px", paddingTop: "20px"}}>{plan.plan}</h4>
                    </div>
-                   <button onClick={deleteHandler} className="delete">COMPLETE</button>
+                   <button value="Delete" onClick={deleteHandler} className="delete">COMPLETE</button>
                </div>
                    
                 )}

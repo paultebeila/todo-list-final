@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 
 function Home(props){
 
-    const Logout = () => {
-        
-    }
 
     return (
         

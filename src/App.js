@@ -17,7 +17,6 @@ function App() {
       plan:plan,
       priority:priority
     }])
-    
   })
   return (
 
