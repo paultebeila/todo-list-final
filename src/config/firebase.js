@@ -5,13 +5,13 @@ import {getAuth} from 'firebase/auth'
 import {getFirestore} from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC_NR3mhJy_tjtpD2s1gaV3rpJyrp3XHZU",
-  authDomain: "budgwt-app.firebaseapp.com",
-  projectId: "budgwt-app",
-  storageBucket: "budgwt-app.appspot.com",
-  messagingSenderId: "882072944485",
-  appId: "1:882072944485:web:30a76dff8566a669712b8c",
-  measurementId: "G-XSN4YQL78L"
+  apiKey: "AIzaSyAtMIhX5y6Vei0jh7OykLnNR7YI3giDito",
+  authDomain: "todo-list-9e65a.firebaseapp.com",
+  projectId: "todo-list-9e65a",
+  storageBucket: "todo-list-9e65a.appspot.com",
+  messagingSenderId: "770318378116",
+  appId: "1:770318378116:web:aafd14920480e0afd5ced1",
+  measurementId: "G-SHCDQCD8MB"
 };
 
 // Initialize Firebase

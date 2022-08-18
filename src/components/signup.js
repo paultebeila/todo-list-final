@@ -16,8 +16,8 @@ function SignUp(){
 
         createUserWithEmailAndPassword(auth, email, Name, surname, password).then(()=>{
             history.push("/home");
-        }).catch((error)=>{
-            console.log(error);
+        }).catch((err)=>{
+            console.log(err);
         })
         
     })
@@ -31,9 +31,9 @@ function SignUp(){
             <input type="text" placeholder="Enter your surname" onChange={(e)=>setSurname(e.target.value)}/><br></br>
             <input type="password" placeholder="Enter your password" onChange={(e)=>setPassword(e.target.value)}/><br></br>
 
-            <button style={{width: "150px", height: "30px"}} onClick={register}>Sign SignUp</button>
+            <button style={{width: "150px", height: "30px"}} onClick={register}>SignUp</button>
         </div>
     )
 }
 
-export default SignUp
+export default SignUp;

@@ -36,4 +36,4 @@ function ForgotPass(){
     )
 }
 
-export default ForgotPass
+export default ForgotPass;
