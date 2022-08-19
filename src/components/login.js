@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import {useHistory} from "react-router-dom"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import {auth} from  '../config/firebase'
+import { signInWithPopup } from 'firebase/auth'
+import { provider } from '../config/firebase'
 
 function Login(){
 
@@ -11,17 +13,24 @@ function Login(){
 
     let history = useHistory();
 
-    const login = (()=>{
+    const signin = (()=>{
 
         signInWithEmailAndPassword(auth, email, password).then(()=>{
             history.push("/home");
         }).catch(()=>{
             console.log();
             console.log('Wrong log in details');
-        })
-
-        
+        }) 
     })
+
+    const signInWithGoogle = () => {
+        signInWithPopup(auth, provider).then((result) => {
+            history.push("/home");
+        }).catch((error) => {
+          console.log(error);
+        })
+      }
+
     return(
         <div className="container">
 
@@ -29,11 +38,12 @@ function Login(){
             <input type="email" placeholder="Enter your email" onChange={(e)=> setEmail(e.target.value)}/><br></br>
             <input type="password" placeholder="Enter your password" onChange={(e)=> setPassword(e.target.value)}/><br></br>
 
-            <button style={{width: "150px", height: "30px"}} onClick={login}>Login</button>
+            <button style={{width: "150px", height: "30px"}} onClick={signin}>Login</button>
+
+            <button onClick={signInWithGoogle}>Google</button>
 
             <span>Forgot Password?</span> <span>
-                <Link to="/forgotPassword">Reset your Password</Link>
-                
+                <Link to="/forgotPassword">Reset your Password</Link>  
             </span>
             <br></br>
 

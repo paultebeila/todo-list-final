@@ -10,7 +10,7 @@ function Home(props){
         
         <div className="container">
             <form className='panel'>
-                    <h2>Paul</h2>
+                    <h2>{localStorage.getItem("name")}</h2>
                     <Link to="/"><button className='btn'>Log out</button></Link>
                     
                 </form>

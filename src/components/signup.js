@@ -32,6 +32,7 @@ function SignUp(){
             <input type="password" placeholder="Enter your password" onChange={(e)=>setPassword(e.target.value)}/><br></br>
 
             <button style={{width: "150px", height: "30px"}} onClick={register}>SignUp</button>
+
         </div>
     )
 }
