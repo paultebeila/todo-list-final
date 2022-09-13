@@ -13,6 +13,8 @@ function Display(props){
 
     return(
         <div id='row'>
+            
+            <h1 style={{color: 'Gray'}}>Below are your Plans</h1>
            {props.list.map((plan) => (
                <div>
 
